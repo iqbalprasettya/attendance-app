@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    /* reset */
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    border-radius: 6px;
+    padding-left: 9px;
+    border-left: 10px solid rgba(201, 13, 14, 1);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dot-container {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    align-self: center;
+    margin-right: 7px;
+}
+
+.dot-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px; /* Setengah dari ukuran dot-front */
+    height: 20px; /* Setengah dari ukuran dot-front */
+    background-color: rgba(201, 13, 14, 0.3); /* Hijau dengan transparansi 40% */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: dotPulse 1.5s infinite ease-in-out;
+}
+
+.dot-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(201, 13, 14, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+.btn-custom {
+    background-color: rgba(201, 13, 14, 1);
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    width: 100%;
+}
+.count-time p {
+    font-size: 11pt;
+}
+.count-time .time-total {
+    margin-left: 30px;
+}
+.attendance-header {
+    background: rgb(201, 13, 14);
+    background: linear-gradient(
+        137deg,
+        rgba(201, 13, 14, 1) 0%,
+        rgba(246, 139, 9, 1) 100%
+    );
+    border-radius: 0 0 10px 10px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.attendance-header h5 {
+    color: rgba(255, 255, 255, 0.7);
+}
+.attendance-header a {
+    color: #fff;
+    font-size: 24pt;
+}
+
+.attendance-header .jadwal-text {
+    font-size: 11pt;
+    align-content: center;
+}
+.jadwal-tanggal {
+    font-size: 11pt;
+    color: rgba(201, 13, 14, 1);
+    background-color: rgba(201, 13, 14, 0.2);
+    padding: 4px 14px;
+    border-radius: 10px;
+    align-content: center;
+}
+.card .text-card p {
+    font-size: 11pt;
+}
+.time-work {
+    font-size: 11pt;
+}
+
+/* dekstop size */
+@media (min-width: 992px) {
+    .attendance-header {
+        padding-right: 500px !important;
+        padding-left: 500px !important;
+    }
+    .attendance-history {
+        padding-right: 500px !important;
+        padding-left: 500px !important;
+    }
+}
